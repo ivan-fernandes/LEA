@@ -2,11 +2,11 @@ import smtplib
 
 
 def send_email():
-    gmail_user = 'your_email@gmail.com'
-    gmail_password = 'your_gmail_app_password' # set your app password in your Google Account as a 2FA
+    gmail_user = 'ivanbfernandes@gmail.com'
+    gmail_password = 'brtlqetfobnudxaa' # set your app password in your Google Account as a 2FA
 
-    sent_from = 'LEA@LEA.de'
-    to = ['your_email@your_provider.com']
+    sent_from = 'LEA_BERLIN@lea-berlin.de'
+    to = ['ivanbfernandes@gmail.com']
     subject = 'APPOINTMENT AVAILABLE'
     body = "Hey,\n\n An appointment might be available! \n Go grab it!!\n\n Best regards, \n\n Ivan"
 
