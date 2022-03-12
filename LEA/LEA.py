@@ -21,7 +21,7 @@ chrome_options.add_argument("disable-infobars")
 chrome_options.add_argument("--disable-extensions")
 
 # Set path to chromedriver as per your configuration
-webdriver_service = Service("chromedriver/stable/chromedriver")
+webdriver_service = Service("/usr/bin/chromedriver")
 
 # Choose Chrome Browser
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
