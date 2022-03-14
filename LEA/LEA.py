@@ -25,7 +25,7 @@ webdriver_service = Service("/usr/bin/chromedriver")
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 wait = WebDriverWait(browser,5)
 wait2 = WebDriverWait(browser,30)
-url = "https://otv.verwalt-berlin.de/ams/TerminBuchen/wizardng/3f5e70cf-3b3b-42e9-bef3-68324b320a4b?dswid=8583&dsrid=609&v=1646210778433&st=2"
+url = "https://otv.verwalt-berlin.de/ams/TerminBuchen/wizardng/5d4ffe1a-fabf-4231-8599-55cf699a382f?dswid=4946&dsrid=640&st=2&v=1647255436709"
 
 
 ##### get the current time
@@ -43,9 +43,9 @@ data-handler = selectDay
 data-event = click
 data-year = 2022
 '''
-
 a = 1
 b = 0
+
 
 while True:
     browser.get(url)
@@ -61,7 +61,7 @@ while True:
         # browser.find_element(By.XPATH, '//*[@id="messagesBox"]/ul/li')
         print("Found list box. No appointments available!")
         # browser.close()
-        time.sleep(random.randrange(225,400,1)
+        time.sleep(random.randrange(225,400,1))
         print("----------------------------------")
         print(f"Trial number: {a}")
         a+=1
