@@ -42,14 +42,13 @@ data-handler = selectDay
 data-event = click
 data-year = 2022
 '''
-
+a = 1
 
 while True:
     browser.get(url)
 #    ipdb.set_trace()
     print(browser.current_url)
-    a = 1
-
+    
     try:
         print("--")
         browser.execute_script("return arguments[0].scrollIntoView(true);", wait2.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="applicationForm:managedForm:proceed"]'))))
@@ -67,5 +66,5 @@ while True:
     except:
         print("Appointment might be available. Go check it out")
         send_email()
-        time.sleep(2)
+        time.sleep(5)
         break # break from while loop
