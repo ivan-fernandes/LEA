@@ -24,7 +24,7 @@ webdriver_service = Service("/usr/bin/chromedriver")
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 wait = WebDriverWait(browser,5)
 wait2 = WebDriverWait(browser,30)
-url = "https://otv.verwalt-berlin.de/ams/TerminBuchen/wizardng/3f5e70cf-3b3b-42e9-bef3-68324b320a4b?dswid=8583&dsrid=609&v=1646210778433&st=2"
+url = "https://otv.verwalt-berlin.de/ams/TerminBuchen/wizardng/5d4ffe1a-fabf-4231-8599-55cf699a382f?dswid=4946&dsrid=640&st=2&v=1647255436709"
 
 
 ##### get the current time
