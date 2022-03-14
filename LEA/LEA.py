@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import TimeoutException, WebDriverException
+import random
 
 from email_LEA import send_email
 
@@ -43,12 +44,13 @@ data-event = click
 data-year = 2022
 '''
 
+a = 1
+b = 0
 
 while True:
     browser.get(url)
 #    ipdb.set_trace()
     print(browser.current_url)
-    a = 1
 
     try:
         print("--")
@@ -59,13 +61,19 @@ while True:
         # browser.find_element(By.XPATH, '//*[@id="messagesBox"]/ul/li')
         print("Found list box. No appointments available!")
         # browser.close()
-        time.sleep(300)
+        time.sleep(random.randrange(225,400,1)
         print("----------------------------------")
         print(f"Trial number: {a}")
         a+=1
         url = browser.current_url
     except:
-        print("Appointment might be available. Go check it out")
-        send_email()
-        time.sleep(2)
-        break # break from while loop
+        b+=1
+        if b<=3:
+            print("Appointment might be available. Go check it out")
+            send_email()
+            time.sleep(2)
+        else:
+            print("Appointment might be available. Go check it out")
+            send_email()
+            time.sleep(2)
+            break # break from while loop
